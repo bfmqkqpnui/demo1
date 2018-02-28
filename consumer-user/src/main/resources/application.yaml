@@ -1,0 +1,16 @@
+server:
+    port: 21080
+eureka:
+  instance:
+    non-secure-port: ${server.port}
+    preferIpAddress: true #像eureka服务注册信息时，使用ip地址，默认使用hostname
+    #服务的instance-id默认默认值是
+    #${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    #也就是机器主机名:应用名称:应用端口
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/   #eureka的服务地址
+spring:
+  application:
+    name: consumer-user

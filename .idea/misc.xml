@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/provideruser/pom.xml" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer-user/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server-ribbon/pom.xml" />
       </list>
     </option>
   </component>
