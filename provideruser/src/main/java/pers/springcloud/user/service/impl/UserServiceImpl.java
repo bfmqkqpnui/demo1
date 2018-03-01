@@ -59,6 +59,27 @@ public class UserServiceImpl implements IUserService {
         return dto;
     }
 
+    @Override
+    public ReturnDTO queryUserId(Long id) {
+        ReturnDTO dto = new ReturnDTO();
+        dto.setSuccess(false);
+        if (null != id) {
+            User user = userDao.findOne(id);
+            if (null != user) {
+                dto.setSuccess(true);
+                dto.setResCode("200");
+                dto.setObj(user);
+            } else {
+                dto.setResCode("404");
+                dto.setErrMsg("该编号[" + id.intValue() + "]所查询的用户不存在,请确认。");
+            }
+        } else {
+            dto.setResCode("400");
+            dto.setErrMsg("查询的用户编号不能为空");
+        }
+        return dto;
+    }
+
     /**
      * 分页查询
      *

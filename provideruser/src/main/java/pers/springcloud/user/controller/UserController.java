@@ -33,7 +33,7 @@ public class UserController {
     }
 
     @PostMapping(value = "/user/queryList")
-    public ReturnDTO queryUserList(@RequestBody PageParams params) {
+    public ReturnDTO queryUserList(@RequestBody(required = false) PageParams params) {
         logger.info("分页查询用户列表信息 begin");
         long beginTime = System.currentTimeMillis();
         ReturnDTO dto = new ReturnDTO();
@@ -57,6 +57,21 @@ public class UserController {
         dto = userService.queryByPage(page, size);
 
         logger.info("分页查询用户列表信息 完成,耗时[" + (System.currentTimeMillis() - beginTime) + "]毫秒");
+        return dto;
+    }
+
+    @GetMapping(value = "/user/queryUserId/{id}")
+    public ReturnDTO queryUserId(@PathVariable Long id) {
+        logger.info("根据用户的自增长编号查询用户信息 begin");
+        long beginTime = System.currentTimeMillis();
+        ReturnDTO dto = new ReturnDTO();
+        dto.setSuccess(false);
+        dto.setResCode("400");
+        dto.setErrMsg("未查询到相关信息");
+
+        dto = userService.queryUserId(id);
+
+        logger.info("根据用户的自增长编号查询用户信息 完成,耗时[" + (System.currentTimeMillis() - beginTime) + "]毫秒");
         return dto;
     }
 }

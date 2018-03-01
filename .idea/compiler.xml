@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
+        <module name="consumer-feign-user" />
         <module name="consumer-user" />
         <module name="eureka-server-ribbon" />
         <module name="provider-user" />
@@ -14,6 +15,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.8" />
+      <module name="consumer-feign-user" target="1.8" />
       <module name="consumer-user" target="1.8" />
       <module name="eureka-server-ribbon" target="1.8" />
       <module name="provider-user" target="1.8" />

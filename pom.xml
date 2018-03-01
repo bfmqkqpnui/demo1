@@ -12,8 +12,22 @@
         <module>common</module>
         <module>consumer-user</module>
         <module>eureka-server-ribbon</module>
+        <module>consumer-feign-user</module>
     </modules>
     <packaging>pom</packaging>
+
+    <!-- 配置信息 -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <springboot.version>1.5.7.RELEASE</springboot.version>
+        <eureka.version>1.4.2.RELEASE</eureka.version>
+        <ribbon.version>1.4.2.RELEASE</ribbon.version>
+        <spring.cloud.version>1.1.7.RELEASE</spring.cloud.version>
+        <junit.version>4.12</junit.version>
+        <actuator.version>1.5.9.RELEASE</actuator.version>
+    </properties>
 
     <!-- 继承父包 -->
     <parent>
@@ -21,17 +35,6 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.7.RELEASE</version>
     </parent>
-
-    <!-- 配置信息 -->
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <eureka.version>1.4.2.RELEASE</eureka.version>
-        <ribbon.version>1.4.2.RELEASE</ribbon.version>
-        <spring.cloud.version>1.1.7.RELEASE</spring.cloud.version>
-        <junit.version>4.12</junit.version>
-    </properties>
 
     <build>
         <plugins>

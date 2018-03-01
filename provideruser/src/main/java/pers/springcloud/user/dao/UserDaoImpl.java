@@ -20,4 +20,6 @@ public interface UserDaoImpl extends JpaRepository<User, Long>, JpaSpecification
      * @return
      */
     User queryByUserId(String userId);
+
+
 }

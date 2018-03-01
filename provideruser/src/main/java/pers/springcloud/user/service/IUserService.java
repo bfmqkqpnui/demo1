@@ -9,6 +9,8 @@ public interface IUserService {
 
     ReturnDTO queryByUserId(String uId);
 
+    ReturnDTO queryUserId(Long id);
+
     ReturnDTO queryByPage(int currentPage, int pageSize);
 
     ReturnDTO updateUserInfo(User user);
@@ -18,4 +20,6 @@ public interface IUserService {
     ReturnDTO addUser(User user);
 
     ReturnDTO addUsers(List<User> users);
+
+
 }

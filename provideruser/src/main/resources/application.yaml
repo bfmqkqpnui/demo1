@@ -1,5 +1,5 @@
 server:
-  port: 30080
+  port: 8155 #${random.int(8100,8200)}
 
 spring:
   application:
